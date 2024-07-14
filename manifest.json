@@ -4,11 +4,14 @@
   "version": "1.0",
   "description": "Appends a QR code to the YouTube share button popup.",
   "permissions": ["activeTab", "scripting"],
-  "icons": {
-    "16": "images/icon-16.png",
-    "32": "images/icon-32.png",
-    "48": "images/icon-48.png",
-    "128": "images/icon-128.png"
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
   },
   "content_scripts": [
     {
@@ -18,7 +21,13 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["libs/qrcode.min.js"],
+      "resources": [
+        "libs/qrcode.min.js",
+        "images/icon-16.png",
+        "images/icon-32.png",
+        "images/icon-48.png",
+        "images/icon-128.png"
+      ],
       "matches": ["<all_urls>"]
     }
   ]
