@@ -3,7 +3,6 @@
   "name": "YouTube QR Code Share",
   "version": "1.0",
   "description": "Appends a QR code to the YouTube share button popup.",
-  "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
